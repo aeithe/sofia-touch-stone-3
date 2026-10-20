@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>North Star Bakery - Contact & Pre-Orders</title>
+</head>
+<body>
+    
+    <header>
+        <img src="pictures-and-videos/bakery-logo_c.png" alt="North Star Bakery Logo">
+        <h1>Contact & Pre-Order Requests</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact & Pre-Orders</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Location & Store Hours</h2>
+            <p><strong>Address:</strong> 123 Main Street, Suite A</p>
+            <p><strong>Hours:</strong> Tuesday – Sunday: 6:00 AM – 4:00 PM (Closed Mondays)</p>
+            <p><strong>Phone:</strong> (555) 019-2834</p>
+        </section>
+
+        <section>
+            <h2>Inquiry & Pre-Order Form</h2>
+            <p>Use the form below to submit a pre-order request or ask a general question. We ask for at least 24 hours notice for pre-orders.</p>
+            
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    
+                    <p>
+                        <label for="full-name">Full Name:</label><br>
+                        <input type="text" id="full-name" name="full_name" required>
+                    </p>
+                    
+                    <p>
+                        <label for="email">Email Address:</label><br>
+                        <input type="email" id="email" name="email" required>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Order Details</legend>
+
+                    <p>
+                        <label for="request-type">Request Type:</label><br>
+                        <select id="request-type" name="request_type" required>
+                            <option value="">-- Please Select --</option>
+                            <option value="pre-order">Pre-Order</option>
+                            <option value="general-inquiry">General Question</option>
+                            <option value="catering">Catering Inquiry</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="pickup-date">Requested Pickup Date:</label><br>
+                        <input type="date" id="pickup-date" name="pickup_date" required>
+                    </p>
+
+                    <p>
+                        <label for="item-details">Item Details & Quantities:</label><br>
+                        <textarea id="item-details" name="item_details" rows="4" cols="40" placeholder="e.g., 2 Signature Loaves, 1 Dozen Croissants" required></textarea>
+                    </p>
+
+                    <p>
+                        <label for="allergy-notes">Allergy Notes or Special Instructions (Optional):</label><br>
+                        <textarea id="allergy-notes" name="allergy_notes" rows="3" cols="40" placeholder="Let us know about any nut, dairy, or gluten allergies."></textarea>
+                    </p>
+                </fieldset>
+
+                <p>
+                    <button type="submit">Submit Request</button>
+                </p>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p> © 2026 North Star Bakery. All rights reserved. </p>
+    </footer>
+
+</body>
+</html>
