@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="script.js"></script>
     <title>North Star Bakery – ☆ Products ☆</title>
 </head>
 <body>
@@ -23,7 +24,10 @@
             </ul>
         </nav>
     </header>
-
+    <div class="fav-summary">
+        <h3>Your Saved Pre-Order Items (<span id="fav-count">0</span>)</h3>
+        <div id="fav-list"><p>No items saved yet. Click '+ Save to Order' on any item!</p></div>
+    </div>
     <main>
         <section>
             <h2>Artisan Breads ☆</h2>
@@ -36,6 +40,7 @@
                 <img src="pictures-and-videos/bakery-signature-loaf_c.png" alt="Golden brown North Star Signature Sourdough Loaf with decorative scoring">
                 <figcaption>Our famous Signature Sourdough Loaf, baked fresh every morning at 5:00 AM.</figcaption>
             </figure>
+            <button class="fav-btn" data-item="Signature Sourdough Loaf">+ Save to Order</button>
         </section>
 
         <section>
@@ -43,6 +48,7 @@
             <img src="pictures-and-videos/bakery-feature-small_c.png" alt="Assortment of fresh cookies and pastries displayed in a glass case">
             <p>Flaky, butter-rich croissants, fruit tarts, and cinnamon rolls baked throughout the morning. </p>
             <p>Price Range: $3.50 - $6.50 each</p>
+            <button class="fav-btn" data-item="Butter Croissant">+ Save to Order</button>
         </section>
 
         <section>

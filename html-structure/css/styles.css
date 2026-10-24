@@ -1,6 +1,6 @@
 :root {
     --cream: #FFF8F0;
-    --brown: #4A2E1B;
+    --brown: #6e472d;
     --terracotta: #D96B43;
     --charcoal: #2C2523;
 }
@@ -180,5 +180,77 @@ footer {
 
     .grid-container section {
         flex: 1;
+    }
+
+    .fav-btn {
+    background-color: #4A2E1B;
+    color: #FFF8F0;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    margin-top: 8px;
+    }
+
+    .fav-btn.saved {
+    background-color: #2e6b38;
+    }
+
+    .fav-summary {
+    background-color: #FFFFFF;
+    border: 2px solid #D96B43;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+.fav-summary h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #4A2E1B;
+    }
+
+.fav-summary ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+    }
+
+.fav-summary li {
+    padding: 4px 0;
+    font-weight: 600;
+    color: #2C2523;
+    }
+
+.clear-btn {
+    background-color: transparent;
+    color: #c92a2a;
+    border: 1px solid #c92a2a;
+    padding: 4px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    margin-top: 8px;
+    }
+
+.clear-btn:hover {
+    background-color: #c92a2a;
+    color: #FFFFFF;
+    }
+
+    .error-message {
+    color: #c92a2a;
+    font-size: 0.85rem;
+    font-weight: bold;
+    display: block;
+    margin-top: 4px;
+    }
+
+    .input-error {
+    border: 2px solid #c92a2a !important;
+    background-color: #fff5f5;
     }
 }
