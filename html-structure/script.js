@@ -86,17 +86,44 @@ function updateFavoritesUI() {
         } else {
             listDisplay.innerHTML = "<ul>" + 
                 savedFavorites.map(item => `<li>${item}</li>`).join("") + 
-                "</ul>";
+                "</ul>" +
+                "<button id='clear-favs-btn' class='clear-btn'>Clear All Items</button>";
+
+            const clearBtn = document.getElementById("clear-favs-btn");
+            if (clearBtn) {
+                clearBtn.addEventListener("click", clearAllFavorites);
+            }
         }
     }
 }
 
+function clearAllFavorites() {
+    savedFavorites = [];
+    saveFavoritesToStorage();
+    updateFavoritesUI();
+
+    const favButtons = document.querySelectorAll(".fav-btn");
+    favButtons.forEach(btn => {
+        btn.textContent = "+ Save to Order";
+        btn.classList.remove("saved");
+    });
+}
+
 function prefillContactForm() {
     const itemDetailsField = document.getElementById("item-details");
-    if (itemDetailsField && savedFavorites.length > 0) {
-        if (!itemDetailsField.value.trim()) {
-            itemDetailsField.value = "Saved Pre-Order Items:\n- " + savedFavorites.join("\n- ");
+    const stored = localStorage.getItem("northStarFavorites");
+    let items = [];
+    
+    if (stored) {
+        try { 
+            items = JSON.parse(stored); 
+        } catch (e) { 
+            items = []; 
         }
+    }
+
+    if (itemDetailsField && items.length > 0) {
+        itemDetailsField.value = "Saved Pre-Order Items:\n- " + items.join("\n- ");
     }
 }
 
